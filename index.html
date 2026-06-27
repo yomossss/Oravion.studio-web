@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oravion.studio — Creative technology studio by Youness. Games, web apps, and digital experiences." />
+  <meta name="theme-color" content="#0D0D0D" />
+  <title>Oravion.studio — Creating Anything &amp; Everything</title>
+
+  <!-- Google Font: Space Grotesk (geometric, modern) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       1. LOADING SCREEN — Logo reveal + cyan glow pulse
+       ═══════════════════════════════════════════════════════════ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__glow"></div>
+    <img src="logo.png" alt="ORAVION STUDIO" class="loader__logo" width="280" height="auto" />
+  </div>
+
+  <!-- Animated noise texture overlay (full viewport) -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Background gradient orbs -->
+  <div class="orbs" aria-hidden="true">
+    <div class="orb orb--cyan orb--1" data-parallax="0.03"></div>
+    <div class="orb orb--white orb--2" data-parallax="0.05"></div>
+    <div class="orb orb--cyan orb--3" data-parallax="0.02"></div>
+    <div class="orb orb--white orb--4" data-parallax="0.04"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       2. NAVBAR — Floating glass bar
+       ═══════════════════════════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner container">
+      <a href="#home" class="navbar__brand" aria-label="Oravion.studio Home">
+        <img src="logo.png" alt="ORAVION STUDIO" class="navbar__logo" width="120" height="auto" />
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         3. HERO — Full screen cinematic intro
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="home" class="hero">
+      <div class="hero__parallax" id="heroParallax">
+        <div class="hero__glow"></div>
+        <img src="logo.png" alt="ORAVION STUDIO" class="hero__logo" width="420" height="auto" data-depth="0.08" />
+      </div>
+      <div class="hero__content" data-reveal>
+        <h1 class="hero__title">Creating Anything &amp; Everything.</h1>
+        <p class="hero__subtitle">Games. Web Apps. Digital Experiences.</p>
+        <p class="hero__founder">Founded by Youness</p>
+        <a href="#projects" class="btn btn--glass">Explore Our Work</a>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         4. ABOUT — Glass card with animated border glow
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="about" class="section section--about">
+      <div class="container">
+        <article class="glass-card glass-card--glow" data-reveal>
+          <h2 class="section__title">About Oravion.studio</h2>
+          <p class="glass-card__text">
+            Oravion.studio is a creative technology studio founded by Youness.
+            We design and build games, web apps, and digital experiences with a futuristic and minimalist approach.
+            Our mission is to turn bold ideas into powerful interactive products.
+          </p>
+          <ul class="tags" aria-label="Focus areas">
+            <li class="tag">Games</li>
+            <li class="tag">Web Apps</li>
+            <li class="tag">Creative Software</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         5. PROJECTS — Glass cards with tilt + glow hover
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="projects" class="section section--projects">
+      <div class="container">
+        <h2 class="section__title section__title--center" data-reveal>Projects</h2>
+        <div class="projects-grid">
+
+          <article class="project-card glass-card project-card--shift" data-reveal data-tilt>
+            <div class="project-card__media">
+              <video
+                class="project-card__preview"
+                src="shift-trailer.mp4"
+                muted
+                playsinline
+                loop
+                preload="metadata"
+                aria-hidden="true"
+              ></video>
+              <div class="project-card__media-overlay" aria-hidden="true"></div>
+              <span class="project-card__badge">Official Trailer</span>
+              <button type="button" class="project-card__play" data-trailer-open aria-label="Play SHIFT trailer">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__icon" aria-hidden="true">◈</div>
+              <h3 class="project-card__title">SHIFT</h3>
+              <p class="project-card__label">Minimalist Reflex Game</p>
+              <p class="project-card__desc">A high-speed minimal arcade experience.</p>
+              <div class="project-card__actions">
+                <button type="button" class="btn btn--glass btn--sm" data-trailer-open>Watch Trailer</button>
+                <a href="shift.apk" download class="btn btn--glass btn--sm">Download APK</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" data-reveal data-tilt>
+            <div class="project-card__icon" aria-hidden="true">◇</div>
+            <h3 class="project-card__title">Web Experiments</h3>
+            <p class="project-card__label">Interactive Tools</p>
+            <p class="project-card__desc">Creative interactive web apps and digital tools.</p>
+          </article>
+
+          <article class="project-card glass-card project-card--soon" data-reveal data-tilt>
+            <div class="project-card__icon" aria-hidden="true">○</div>
+            <h3 class="project-card__title">Coming Soon</h3>
+            <p class="project-card__label">In Development</p>
+            <p class="project-card__desc">New experiences currently in development.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         6. CONTACT — Glass form + social links
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="contact" class="section section--contact">
+      <div class="container container--narrow">
+        <h2 class="section__title section__title--center" data-reveal>Contact</h2>
+
+        <form class="contact-form glass-card" id="contactForm" data-reveal novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--send">Send</button>
+          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-links" data-reveal>
+          <a href="mailto:contact@oravion.studio" class="contact-link">
+            <span class="contact-link__label">Email</span>
+            <span>contact@oravion.studio</span>
+          </a>
+          <a href="https://instagram.com/Oravionstudio" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <span class="contact-link__label">Instagram</span>
+            <span>@Oravionstudio</span>
+          </a>
+          <a href="https://github.com/Oravionstudio" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <span class="contact-link__label">GitHub</span>
+            <span>github.com/Oravionstudio</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       7. FOOTER — Minimal glass style
+       ═══════════════════════════════════════════════════════════ -->
+  <!-- SHIFT trailer — cinematic modal player -->
+  <div class="trailer-modal" id="trailerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="trailerTitle">
+    <div class="trailer-modal__backdrop" data-trailer-close></div>
+    <div class="trailer-modal__panel glass-card">
+      <button type="button" class="trailer-modal__close" data-trailer-close aria-label="Close trailer">&times;</button>
+      <h3 class="trailer-modal__title" id="trailerTitle">SHIFT — Official Trailer</h3>
+      <video
+        id="trailerPlayer"
+        class="trailer-modal__video"
+        src="shift-trailer.mp4"
+        controls
+        playsinline
+        preload="metadata"
+      ></video>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="logo.png" alt="ORAVION STUDIO" class="footer__logo" width="80" height="auto" />
+      <p class="footer__text">© 2024 Oravion.studio — Designed by Youness</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
